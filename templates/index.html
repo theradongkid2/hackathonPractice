@@ -12,9 +12,8 @@
     </head>
 
     <body>
+        <img id="logo" src="{{ url_for('static', filename='images/kronosicon.jpg')}}" alt="Kronos Logo" />
         <div id="container">
-
-            <img id="logo" src="{{ url_for('static', filename='images/kronosicon.jpg')}}" alt="Kronos Logo" />
         
           <div id="kronosTitle">
               <h1>Kronos</h1>
@@ -29,13 +28,7 @@
               <p inline;>useful functions all in one ergonomic website.</p>
         
               <div >
-                <a href="./timesNoTimetableDetected.html" id="buttonEnterClasses" style="font: Roboto !important">Enter Bell Times</a> 
-               <script>
-                 var enter = document.getElementById("buttonEnterClasses");
-                if (localStorage.getItem("personalTimetable") !== null) {
-                  enter.href = "./times.html"
-            }
-                </script>
+                <a href="./times.html" id="buttonEnterClasses" style="font: Roboto !important">Enter Bell Times</a> 
               </div>
 
           </div>
