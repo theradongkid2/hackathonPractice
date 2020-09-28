@@ -41,7 +41,7 @@
           <input type="text">
           <br>
           <p>Password:</p>
-          <input type="password" id="">
+          <input type="password" id="passwordForm">
           <br>
         </div>
         <div class="rememberMeCheckboxButton">
@@ -49,13 +49,15 @@
           <input type="checkbox" id="rememberCheck">
 
           <script>
-            if(document.getElementById(rememberCheck).value === "on"){
-              const password = document.getElementById()
+            const password = localStorage.getItem('password');
+            if(document.getElementById("rememberCheck").checked === true){
+              const password = document.getElementById("passwordForm").value;
+              localStorage.setItem('password', password)
             }
           </script>
         </div>
         <div class="loginButton">
-          <button onclick="" id="loginButton">Login</button>
+          <button onclick="window.location = 'home'" id="loginButton">Login</button>
         </div>
     </div>
 
